@@ -1,7 +1,9 @@
 package org.codecat;
 
 /**
- * Class Simulation
+ * Class Simulation.
+ * <p>
+ * Tutorial #1
  *
  * @author Scoowy
  * @version 2020.06.03.0934
