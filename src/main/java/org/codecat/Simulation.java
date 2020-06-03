@@ -1,7 +1,7 @@
 package org.codecat;
 
 /**
- * Class
+ * Class Simulation
  *
  * @author Scoowy
  * @version 2020.06.03.0934
