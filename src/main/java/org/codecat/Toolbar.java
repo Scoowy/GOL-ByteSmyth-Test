@@ -22,12 +22,35 @@ public class Toolbar extends ToolBar {
         erase.setOnAction(this::handleErase);
         Button step = new Button("Step");
         step.setOnAction(this::handleStep);
+        Button reset = new Button("Reset");
+        reset.setOnAction(this::handleReset);
+        Button start = new Button("Start");
+        start.setOnAction(this::handleStart);
+        Button stop = new Button("Stop");
+        stop.setOnAction(this::handleStop);
 
-        this.getItems().addAll(draw, erase, step);
+        this.getItems().addAll(draw, erase, reset, step, start, stop);
+    }
+
+    private void handleStop(ActionEvent event) {
+        this.mainView.getSimulator().stop();
+    }
+
+    private void handleStart(ActionEvent event) {
+        this.mainView.setApplicationState(MainView.SIMULATING);
+        this.mainView.getSimulator().start();
+    }
+
+    private void handleReset(ActionEvent event) {
+        this.mainView.setApplicationState(MainView.EDITING);
+        this.mainView.draw();
     }
 
     private void handleStep(ActionEvent event) {
         System.out.println("Step");
+
+        this.mainView.setApplicationState(MainView.SIMULATING);
+
         this.mainView.getSimulation().step();
         this.mainView.draw();
     }
