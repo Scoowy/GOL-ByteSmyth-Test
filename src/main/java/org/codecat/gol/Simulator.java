@@ -1,4 +1,4 @@
-package org.codecat;
+package org.codecat.gol;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;

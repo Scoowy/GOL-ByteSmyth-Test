@@ -1,9 +1,10 @@
-package org.codecat;
+package org.codecat.gol;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
+import org.codecat.gol.model.CellState;
 
 /**
  * Class
@@ -31,10 +32,10 @@ public class InfoBar extends HBox {
         this.getChildren().addAll(this.editingTool, spacer, this.cursor);
     }
 
-    public void setDrawMode(int drawMode) {
+    public void setDrawMode(CellState drawMode) {
         String drawModeString;
 
-        if (drawMode == Simulation.ALIVE) {
+        if (drawMode == CellState.ALIVE) {
             drawModeString = "Drawing";
         } else {
             drawModeString = "Erasing";

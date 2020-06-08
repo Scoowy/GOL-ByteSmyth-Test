@@ -1,4 +1,4 @@
-package org.codecat;
+package org.codecat.gol;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
